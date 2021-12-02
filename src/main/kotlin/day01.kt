@@ -1,5 +1,3 @@
-package quick.start
-
 class Day01 : Solvable() {
 
     override fun day() = "01"
