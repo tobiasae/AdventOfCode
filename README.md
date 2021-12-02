@@ -1,7 +1,6 @@
-# Kotlin Quick Start
-An empty Kotlin project using Gradle.
+# Advent of Code 2021
 
-You can [use this template](https://github.com/fwcd/kotlin-quick-start/generate) as a starting point for your own project.
+This is based on [this template](https://github.com/fwcd/kotlin-quick-start/).
 
 ## Building
 `./gradlew build`
