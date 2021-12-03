@@ -25,4 +25,13 @@ class AppTest {
         val b = Day02().solveB(getExample("example02.txt"))
         assertEquals("900", b)
     }
+
+    @Test
+    fun testDay03() {
+        val a = Day03().solveA(getExample("example03.txt"))
+        assertEquals("198", a)
+
+        val b = Day03().solveB(getExample("example03.txt"))
+        assertEquals("230", b)
+    }
 }

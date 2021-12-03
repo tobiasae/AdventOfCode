@@ -23,7 +23,7 @@ abstract class Solvable {
 }
 
 fun main(args: Array<String>) {
-    val currDay = Day02()
+    val currDay = Day03()
     if (args.size > 0) {
         currDay.debug()
     } else {
