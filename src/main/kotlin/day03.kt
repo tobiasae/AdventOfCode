@@ -1,16 +1,8 @@
-class Day03 : Solvable() {
-
-    override fun day() = "03"
+class Day03 : Solvable("03") {
 
     override fun solveA(input: List<String>): String {
         val gammaList = getMostCommon(input)
-        val epsilonList =
-                gammaList.map {
-                    when (it) {
-                        0 -> 1
-                        else -> 0
-                    }
-                }
+        val epsilonList = gammaList.map { if (it == 0) 1 else 0 }
 
         return (binaryToInt(gammaList) * binaryToInt(epsilonList)).toString()
     }
@@ -20,8 +12,8 @@ class Day03 : Solvable() {
         var pos = 0
 
         var oxygen = intInput
-        while(oxygen.size > 1) {
-            oxygen = oxygen.filter { l -> l[pos] ==  getMostCommonInt(oxygen)[pos] }
+        while (oxygen.size > 1) {
+            oxygen = oxygen.filter { l -> l[pos] == getMostCommonInt(oxygen)[pos] }
             pos++
         }
 

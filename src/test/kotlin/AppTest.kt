@@ -1,46 +1,30 @@
-import java.io.File
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class AppTest {
 
-    private fun getExample(fileName: String): List<String> {
-        return File("examples/$fileName").readLines()
-    }
-
     @Test
     fun testDay01() {
-        val a = Day01().solveA(getExample("example01.txt"))
-        assertEquals("7", a)
-
-        val b = Day01().solveB(getExample("example01.txt"))
-        assertEquals("5", b)
+        assertDay(Day01(), "7", "5")
     }
 
     @Test
     fun testDay02() {
-        val a = Day02().solveA(getExample("example02.txt"))
-        assertEquals("150", a)
-
-        val b = Day02().solveB(getExample("example02.txt"))
-        assertEquals("900", b)
+        assertDay(Day02(), "150", "900")
     }
 
     @Test
     fun testDay03() {
-        val a = Day03().solveA(getExample("example03.txt"))
-        assertEquals("198", a)
-
-        val b = Day03().solveB(getExample("example03.txt"))
-        assertEquals("230", b)
+        assertDay(Day03(), "198", "230")
     }
 
     @Test
     fun testDay04() {
-        val a = Day04().solveA(getExample("example04.txt"))
-        assertEquals("4512", a)
+        assertDay(Day04(), "4512", "1924")
+    }
 
-        val b = Day04().solveB(getExample("example04.txt"))
-        assertEquals("1924", b)
+    private fun assertDay(day: Solvable, expectedA: String, expectedB: String) {
+        assertEquals(expectedA, day.debugA())
+        assertEquals(expectedB, day.debugB())
     }
 }

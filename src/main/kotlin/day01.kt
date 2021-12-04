@@ -1,6 +1,4 @@
-class Day01 : Solvable() {
-
-    override fun day() = "01"
+class Day01 : Solvable("01") {
 
     override fun solveA(input: List<String>): String {
         val measurements = input.map { it.toInt() }

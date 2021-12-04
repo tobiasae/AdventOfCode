@@ -1,14 +1,11 @@
-class Day02 : Solvable() {
-
-    override fun day() = "02"
+class Day02 : Solvable("02") {
 
     override fun solveA(input: List<String>): String {
         var pos = 0
         var depth = 0
         input.forEach {
-            val line = it.split(" ")
-            val command = line[0]
-            val amount = line[1].toInt()
+            val (command, amountString) = it.split(" ")
+            val amount = amountString.toInt()
             when (command) {
                 "forward" -> pos += amount
                 "up" -> depth -= amount
@@ -23,9 +20,8 @@ class Day02 : Solvable() {
         var depth = 0
         var aim = 0
         input.forEach {
-            val line = it.split(" ")
-            val command = line[0]
-            val amount = line[1].toInt()
+            val (command, amountString) = it.split(" ")
+            val amount = amountString.toInt()
             when (command) {
                 "forward" -> {
                     pos += amount

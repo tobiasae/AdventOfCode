@@ -1,6 +1,4 @@
-class Day04 : Solvable() {
-
-    override fun day() = "04"
+class Day04 : Solvable("04") {
 
     override fun solveA(input: List<String>): String {
         val (drawnNumbers, boards) = readInput(input)
