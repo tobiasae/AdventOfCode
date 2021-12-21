@@ -83,6 +83,11 @@ class AppTest {
         assertDay(Day16(), "14", "3")
     }
 
+    @Test
+    fun testDay17() {
+        assertDay(Day17(), "45", "112")
+    }
+
     private fun assertDay(day: Solvable, expectedA: String, expectedB: String) {
         assertEquals(expectedA, day.debugA())
         assertEquals(expectedB, day.debugB())
