@@ -1,6 +1,7 @@
 import java.io.File
 
 abstract class Solvable(val day: String) {
+    
     final fun run() {
         println(solveADefault())
         println(solveBDefault())
@@ -54,7 +55,8 @@ fun main(args: Array<String>) {
                     Day21(),
                     Day22(),
                     Day23(),
-                    Day24()
+                    Day24(),
+                    Day25()
             )
 
     if (args.size > 0) {
