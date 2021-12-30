@@ -52,7 +52,8 @@ fun main(args: Array<String>) {
                     Day19(),
                     Day20(),
                     Day21(),
-                    Day22()
+                    Day22(),
+                    Day23()
             )
 
     if (args.size > 0) {
